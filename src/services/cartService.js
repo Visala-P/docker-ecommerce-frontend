@@ -1,8 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8081/api/cart";
-
-const API_BASE = "http://localhost:8081/api/cart";
+// Use relative API path so requests are proxied via nginx
+const API_BASE = "/api/cart";
 
 export const addToCart = async (userId, productId) => {
   return await axios.post(`${API_BASE}/add`, {
@@ -23,10 +22,10 @@ export const clearCart = async (userId) => {
 
 // Remove Cart Item
 export const removeCartItem = async (cartItemId) => {
-    try {
-        await axios.delete(`${API_URL}/remove/${cartItemId}`);
-    } catch (error) {
-        console.error("Error removing item from cart", error);
-    }
+  try {
+    await axios.delete(`${API_BASE}/remove/${cartItemId}`);
+  } catch (error) {
+    console.error("Error removing item from cart", error);
+  }
 };
 

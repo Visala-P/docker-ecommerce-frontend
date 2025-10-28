@@ -37,7 +37,7 @@ const Computers = () => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={`http://localhost:8080/api/products/images/${product.imagePath}`}
+                src={`/api/products/images/${product.imagePath}`}
                 alt={product.name}
               />
               <h4>{product.name}</h4>

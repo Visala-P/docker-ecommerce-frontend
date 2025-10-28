@@ -1,0 +1,8 @@
+# Node build artifacts and local files
+node_modules
+dist
+.git
+.vscode
+.DS_Store
+npm-debug.log
+.env

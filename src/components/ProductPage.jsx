@@ -34,7 +34,7 @@ const ProductPage = ({ category }) => {
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className="product-card">
-              <img src={`http://localhost:8080/api/products/images/${product.imagePath}`} alt={product.name} />
+              <img src={`/api/products/images/${product.imagePath}`} alt={product.name} />
               <h3>{product.name}</h3>
               <p>Price: ${product.price}</p>
               <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
