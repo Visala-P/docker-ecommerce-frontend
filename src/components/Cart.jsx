@@ -20,7 +20,11 @@ const Cart = () => {
         <>
           {cartItems.map((item) => (
             <div key={item.id} className="cart-item">
+<<<<<<< HEAD
               <img src={`/api/products/images/${item.imagePath}`} alt={item.name} />
+=======
+              <img src={`http://localhost:8080/api/products/images/${item.imagePath}`} alt={item.name} />
+>>>>>>> ac41b796bdb220c43cf9e6592c63299e02ba9c1d
               <h4>{item.name}</h4>
               <p>${item.price}</p>
               <button onClick={() => removeFromCart(item.id)}>Remove</button>

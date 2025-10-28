@@ -30,7 +30,11 @@ const Mobiles = () => {
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className="product-card">
+<<<<<<< HEAD
               <img src={`/api/products/images/${product.imagePath}`} alt={product.name} />
+=======
+              <img src={`http://localhost:8080/api/products/images/${product.imagePath}`} alt={product.name} />
+>>>>>>> ac41b796bdb220c43cf9e6592c63299e02ba9c1d
               <h4>{product.name}</h4>
               <p>${product.price.toFixed(2)}</p>
               <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
